@@ -1,0 +1,138 @@
+<!-- PROJECTS PAGE  (projects.ejs) -->
+
+<!-- Includes the top layout (header/nav)-->
+<%- include('layout-top') %>
+
+<!--==================================-->
+<!-- PAGE HEADING -->
+<!--==================================-->
+
+ <section class="text-center mt-5">
+
+<!-- Main heading-->
+     <h1 class="display-5 fw-bold">My Projects</h1>
+
+<!-- Short Introduction -->
+ <p class="lead text-muted">Here are some projects I've worked on!</p>
+ </section>
+
+<!--==================================-->
+<!-- PROJECT CARDS SECTION -->
+<!--==================================-->
+
+ <div class="container mt-5">
+
+    <!-- g-4 adds space between cards -->
+    <div class="row g-4">
+
+ <!--PROJECT 1: Portfolio Website -->
+    
+    <!-- This column makes every card take up 1/3 of the row on medium screens -->
+    <div class="col-md-4">
+
+        <!-- This Bootstrap card gives slight shadow for more depth-->
+        <div class="card shadow-sm">
+
+        <!-- Image preview for project -->
+         <img src="/images/portfolio-preview.png" class="card-img-top" alt="Portfolio Website Preview">
+
+            <!-- Has the text and button-->
+            <div class="card-body">
+
+                <!-- Project title -->
+                <h5 class="card-title">Personal Portfolio Webiste</h5>
+
+                <!-- Short description -->
+                <p class="card-text">
+                A personal multi-page portfolio site built with HTML, CSS, and Javascript.
+                It shows my projects, skills, and contact information in a clean design.
+                </p>
+
+                <!-- Github Link -->
+                <a href="https://github.com/sahranhossain" target="_blank" class="btn btn-primary">View on Github</a>
+            </div>
+        </div>
+    </div>
+
+ <!-- PROJECT 2: Packet Tracer Labs -->
+
+    <!-- This column makes every card take up 1/3 of the row on medium screens -->
+    <div class="col-md-4">
+
+        <!-- This Bootstrap card gives slight shadow for more depth-->
+        <div class="card shadow-sm">
+    
+            <!-- Image preview for project -->
+            <img src="/images/packettracerlabs-preview.png" class="card-img-top" alt="Packet Tracer Labs Preview">
+            
+            <!-- Has the text and button-->
+            <div class="card-body">
+    
+                <!-- Project title -->
+                <h5 class="card-title">Packet Tracer Labs</h5>
+                <p class="card-text">
+                    Configured OSPF and static routes in Cisco Packet Tracer.
+                    I learned how routers send routes dynamically and tested connectivity between networks.
+                </p>
+                <a href="https://github.com/sahranhossain" target="_blank" class="btn btn-primary">View on Github</a>
+            </div>
+        </div>
+    </div>
+
+ <!-- PROJECT 3: Secure CRT Labs -->
+
+    <!-- This column makes every card take up 1/3 of the row on medium screens -->
+    <div class="col-md-4">
+
+        <!-- This Bootstrap card gives slight shadow for more depth-->
+        <div class="card shadow-sm">
+    
+            <!-- Image preview for project -->
+            <img src="/images/securecrt-preview.png" class="card-img-top" alt="Secure CRT Labs Preview">
+
+            <!-- Has the text and button-->
+            <div class="card-body">
+    
+                <!-- Project title -->
+                <h5 class="card-title">Secure CRT Labs</h5>
+                <p class="card-text">
+                    Configured different network devices using SecureCRT.
+                    Gained hands-on experience with Cisco IOS commands and troubleshooting CLI errors inside a network.
+                </p>
+                <a href="https://github.com/sahranhossain" target="_blank" class="btn btn-primary">View on Github</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT 4: Intro to Networking 2 Final Project -->
+
+    <!-- This column makes every card take up 1/3 of the row on medium screens -->
+     <div class="col-md-4">
+
+        <!-- This Bootstrap card gives slight shadow for more depth-->
+        <div class="card shadow-sm">
+    
+            <!-- Image preview for project -->
+            <img src="/images/wanproject-preview.png" class="card-img-top" alt="WAN Design Project Preview">
+    
+            <!-- Has the text and button-->
+            <div class="card-body">
+    
+                <!-- Project title -->
+                <h5 class="card-title">Intro to Networking 2 Final Project</h5>
+                <p class="card-text">
+                   Designed a corporate WAN for Crypto Mine by connecting sites in Chicago, Vancouver, Toronto and Mexico using BGP and OPSFP.
+                   Configured VLANS, inter-VLAN routing, EtherChannel, and secure remote access,
+                   and then tested for full connectivity in Packet Tracer.
+                </p>
+                <a href="https://github.com/sahranhossain" target="_blank" class="btn btn-primary">View on Github</a>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- Includes the footer -->
+<%- include('layout-bottom') %>
+    

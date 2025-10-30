@@ -1,0 +1,87 @@
+<!-- CONTACT PAGE (contact.ejs)-->
+
+<!-- Includes the top layout (header, navbar, etc.)-->
+ <%- include('layout-top') %>
+
+ <!--==================================-->
+ <!-- MAIN CONTACT SECTION -->
+ <!--==================================-->
+
+<section class="container mt-5">
+
+    <!--Page Heading -->
+    <h1 class="display-5 fw-bold text-center mb-4">Contact Me</h1>
+
+    <!-- Short Introduction -->
+     <p class="lead text-center text-muted mb-5">
+        Have any questions or just want to connect? Feel free to reach out to me via email.
+        Fill out the form below and I'll get back to you as soon as possible.
+     </p>
+
+ <!--==================================-->
+ <!-- CONTACT FORM  -->
+ <!--==================================-->
+
+    <!-- Centers the form on the page -->
+    <div class="row justify-content-center">
+
+    <!-- Makes the form smaller on bigger screens -->
+        <div class="col-md-8 col-lg-6">
+
+            <!-- <form> tag defines the area that takes the user input-->
+            <!-- 'method="post"' sends the data to the server securely -->
+            <!-- 'action="#"' will make it so that the form won't submit anywhere for now -->
+            <form method ="post" action="#">
+            
+                <!-- Name Field -->
+                <div class="mb-3">
+
+                    <!-- <label> tells user what to type -->
+                        <label for="name" class="form-label">Full name </label>
+
+                    <!-- <input> is where user type their name -->
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <!-- Email Feild-->
+                 <div class="mb-3">
+
+                    <!-- <label> tells user what to type -->
+                    <label for="email" class="form-label">Email address</label>
+
+                    <!-- <input> is where user type their email -->
+                    <!-- 'type="email"' checks if the person entered a valid email -->
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                 </div>
+
+                 <!-- Message Field -->
+                  <div class="mb-3">
+
+                    <!-- <label> tells user what to type -->
+                    <label for="message" class="form-label">Message</label>
+
+                    <!-- <textarea> is used when people want to enter longer text messages -->
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                  </div>
+
+                  <!-- Submit Button -->
+                   <div class="text-center">
+
+                     <!-- Form will be submitted when button is clicked -->
+                     <!-- 'btn btn-primary' classes make it a styled Bootstrap button -->
+                        <button type="submit" class="btn btn-primary px-4 py-2">Send Message</button>
+                   </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<%- include('layout-bottom') %>
+
+     
+  
+ 
+
+
+  

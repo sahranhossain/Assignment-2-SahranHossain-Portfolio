@@ -1,0 +1,58 @@
+<!-- HOME PAGE (home.ejs) -->
+
+<!-- Includes the top layout (header, navbar, etc.)-->
+<%- include('layout-top') %>
+
+ <!--==================================-->
+ <!-- HERO SECTION -->
+ <!--==================================-->
+
+ <section class="text-center mt-5">
+
+    <!-- Big heading for intro section -->
+     <h1 class="display-4 fw-bold">Welcome To My Portfolio</h1>
+
+    <!--Short Description-->
+    <p class="lead text-muted">Hello! My name is Sahran, I'm a Networking & IT student who is passionate about IT and Cybersecurity!</p>
+
+    <!-- Button to take people to my projects -->
+     <a href="/projects" class="btn btn-primary btn-lg mt-3">
+        View My Projects
+     </a>
+ </section>
+
+ <!--==================================-->
+ <!-- PROFILE IMAGE SECTION -->
+ <!--==================================-->
+
+    <section class="text-center mt-5">
+        <!--Profile Picture-->
+        <img src="/images/MyPicture.jpeg" alt="Sahran Hossain" class="rounded-circle shadow" width="200" heigth="200">   
+    </section>
+ <!--==================================-->
+ <!--ABOUT PREVIEW SECTION-->
+ <!--==================================-->
+
+<section class="container mt-5">
+   <h2 class= "text-center mb-4">About Me</h2>
+
+   <p class="text-center">
+      I'm a university student studying Networking & Security IT. 
+      I love configuring networks and learning cybersecurity tools!
+      <a href="/about" class="text-decoration-none fw-bold">Learn more about me -></a>
+   </p>
+</section>
+ <!--==================================-->
+ <!--CONTACT SECTION-->
+ <!--==================================-->
+
+<section class="text-center bg-dark text-light py-5 mt-5">
+   <h2>Let's Connect!</h2>
+   <p>Have any questions? Feel free to contact me!</p>
+   <a href="/contact" class="btn btn-outline-light mt-2">
+      Contact Me
+   </a>
+</section>
+
+<!--Includes the bottom layout (footer and scripts)-->
+<%- include('layout-bottom') %> 
