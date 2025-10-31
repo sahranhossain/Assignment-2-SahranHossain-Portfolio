@@ -41,5 +41,15 @@ These are some outside code that I used for the website. They will be cited here
    Source: https://fontawesome.com/
    Function: Used this for social media icons such as the GitHub and LinkedIn icons in the footer.
 
+-----------------------------------------------------------------------------------
+
+### Deployment Notes
+My website is deployed on Render (Free Tier).
+Free tier websites on Render automatically spin down after 15 minutes of inactivity to save their resources.
+So when you access the website after inactivity, the website might take up to 1 minute to start again.
+When it's all back up every page and route function should work again.
+
+-----------------------------------------------------------------------------------
+
 
 
