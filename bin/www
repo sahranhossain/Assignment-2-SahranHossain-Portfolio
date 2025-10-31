@@ -1,11 +1,16 @@
-#!/usr/bin/env node
+#!/usr/bin/env node //This lets the system know to use Node.js to run this file
 
 /**
  * Module dependencies.
  */
 
+// Imports the Express app from the main app.js file
 var app = require('../app');
+
+//Imports the debug tool to log useful information about server
 var debug = require('debug')('my-portfolio:server');
+
+// Imports the built in Node HTTP module to make web server
 var http = require('http');
 
 /**
@@ -19,63 +24,85 @@ app.set('port', port);
  * Create HTTP server.
  */
 
+// Creates a new HTTP server that uses the Express app to handle all requests
 var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port, '0.0.0.0');
+// Tells server to listen on the defined port for incoming requests
+server.listen(port, '0.0.0.0'); // 0.0.0.0 means it listens on all network interfaces
+
+// Handles errors if something wrong happens when starting server
 server.on('error', onError);
+
+// Runs onListening function when server starts sucessfully
 server.on('listening', onListening);
 
 
 //Render timeout fixes (stops 502 errors)
-server.keepAliveTimeout = 120000 //2 minutes
-server.headersTimeout = 130000 //2 minutes + 10 seconds
+server.keepAliveTimeout = 120000 //Keeps alive 2 minutes
+server.headersTimeout = 130000 // Waits 2 minutes + 10 seconds before closing inactive connections
+
 /**
  * Normalize a port into a number, string, or false.
  */
 
+// Makes sure port value is valid and well formatted
 function normalizePort(val) {
+
+  //Convert string to integer
   var port = parseInt(val, 10);
 
   if (isNaN(port)) {
-    // named pipe
+    // named pipe used for inter-process communication
     return val;
   }
 
   if (port >= 0) {
-    // port number
+    // valid port number
     return port;
   }
 
-  return false;
+  return false; //invalid port
 }
 
 /**
  * Event listener for HTTP server "error" event.
  */
 
+// Handles different types of server start errors
 function onError(error) {
   if (error.syscall !== 'listen') {
+
+    //If error is not related to listening then rethrow it
     throw error;
   }
 
+  // Figure out if the port is a pipe or port
   var bind = typeof port === 'string'
     ? 'Pipe ' + port
     : 'Port ' + port;
 
   // handle specific listen errors with friendly messages
   switch (error.code) {
+
+    //Denied permission
     case 'EACCES':
       console.error(bind + ' requires elevated privileges');
+
+      //Exits program
       process.exit(1);
       break;
+
+    // Port in use
     case 'EADDRINUSE':
       console.error(bind + ' is already in use');
       process.exit(1);
       break;
+
+    // For any other error
     default:
       throw error;
   }
@@ -85,10 +112,15 @@ function onError(error) {
  * Event listener for HTTP server "listening" event.
  */
 
+// Starts when server sucessfully begins listening
 function onListening() {
+
+  // get the address the server is listening on
   var addr = server.address();
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
+  
+    // Logs message to show that the server is running
   debug('Listening on ' + bind);
 }

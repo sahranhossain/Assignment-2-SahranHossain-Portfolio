@@ -17,7 +17,7 @@ Every page shares the same header and footer with navigation links. The same sty
 
 -----------------------------------------------------------------------------------
 
-### Applications Used
+### Technologies Used
 - Node.js
 - Express.js
 - EJS (Embedded JavaScript Templates)
@@ -41,6 +41,21 @@ These are some outside code that I used for the website. They will be cited here
    Source: https://fontawesome.com/
    Function: Used this for social media icons such as the GitHub and LinkedIn icons in the footer.
 
+3. Render Deployment Coniguration (0.0.0.0)
+   Code: server.listen(port, '0.0.0.0');
+	 server.keepAliveTimeout = 120000;
+	 server.headersTimeout = 130000;
+   source: https://render.com/docs/web-services#port-binding     	 		 	   
+           https://nodejs.org/api/http.html#serverkeepalivetimeout
+   Function: Prevents 502 gateway errors during deployment on Render
+
+4. Copyright Text
+   Code: <!-- Copyright text --> <p>© <%= new Date().getFullYear() %> Sahran Hossain. All rights reserved.</p>
+   Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element#the_%C2%A9_entity
+           https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear
+   Function: Shows a live updating copyright year with the © symbol.
+
+
 -----------------------------------------------------------------------------------
 
 ### Deployment Notes
@@ -50,6 +65,3 @@ So when you access the website after inactivity, the website might take up to 1 
 When it's all back up every page and route function should work again.
 
 -----------------------------------------------------------------------------------
-
-
-
