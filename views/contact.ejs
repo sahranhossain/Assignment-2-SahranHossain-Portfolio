@@ -7,9 +7,11 @@
  <!-- MAIN CONTACT SECTION -->
  <!--==================================-->
 
+ <!-- Makes the main section with margins on the top to provide spacing -->
 <section class="container mt-5">
 
     <!--Page Heading -->
+    <!-- Large centered heading with a bold font -->
     <h1 class="display-5 fw-bold text-center mb-4">Contact Me</h1>
 
     <!-- Short Introduction -->
@@ -23,12 +25,14 @@
  <!--==================================-->
 
     <!-- Centers the form on the page -->
+    <!-- Makes a new Bootstrap row and centers the information inside -->
     <div class="row justify-content-center">
 
     <!-- Makes the form smaller on bigger screens -->
+     <!-- Makes a column for the form on medium or larger screens -->
         <div class="col-md-8 col-lg-6">
 
-            <!-- <form> tag defines the area that takes the user input-->
+            <!-- <form> tag makes the area that takes the user input-->
             <!-- 'method="post"' sends the data to the server securely -->
             <!-- 'action="#"' will make it so that the form won't submit anywhere for now -->
             <form method ="post" action="#">
@@ -44,6 +48,7 @@
                 </div>
 
                 <!-- Email Feild-->
+                 <!-- Adds margins under the email input -->
                  <div class="mb-3">
 
                     <!-- <label> tells user what to type -->
@@ -65,6 +70,7 @@
                   </div>
 
                   <!-- Submit Button -->
+                   <!-- Centers the button under the form -->
                    <div class="text-center">
 
                      <!-- Form will be submitted when button is clicked -->
@@ -76,7 +82,7 @@
     </div>
 </section>
 
-<!-- FOOTER -->
+<!-- Includes bottom layout (footer, closing tags, etc.) -->
 <%- include('layout-bottom') %>
 
      

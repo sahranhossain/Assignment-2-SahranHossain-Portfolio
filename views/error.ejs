@@ -1,3 +1,11 @@
+<!-- ERROR PAGE (error.ejs) -->
+ <!-- This file is for warning the user whenever something goes wrong. Missing page (404) or a server error-->
+
+ <!-- Shows error message -->
 <h1><%= message %></h1>
+
+<!-- Shows error status (404 or 505) -->
 <h2><%= error.status %></h2>
+
+<!-- Shows error details -->
 <pre><%= error.stack %></pre>
