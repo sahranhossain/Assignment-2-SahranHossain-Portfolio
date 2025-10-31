@@ -7,6 +7,14 @@ var express = require('express');
 //Create a router object to handle routes seperately from the main app
 var router = express.Router();
 
+// Redirect root (/) to /home
+// When someone visits the main website link it automatically sends them to the home page (/home)
+router.get('/', (req, res) => {
+
+  //Tells browser to go to a different route  like the /home route
+  res.redirect('/home');
+});
+
 //=======================//
 //HOME PAGE ROUTE //
 //=======================//
