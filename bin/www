@@ -31,7 +31,7 @@ server.on('listening', onListening);
 
 
 //Render timeout fixes (stops 502 errors)
-serverv.keepAliveTimeout = 120000 //2 minutes
+server.keepAliveTimeout = 120000 //2 minutes
 server.headersTimeout = 130000 //2 minutes + 10 seconds
 /**
  * Normalize a port into a number, string, or false.
